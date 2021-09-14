@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Visitor Tracker v.1.0.5b</string>
+
+    <string name="select">Seleziona una stanza</string>
+
+
+    <!-- Popup -->
+    <string name="popup_intro">Al fine di contare i visitatori, selezionare la propria stanza dal menu` a tendina e utilizzare i bottoni `+1` e `-1` per aggiornare il numero di occupanti.\nIl bottone in basso permette di cancellare gli ultimi comandi impartiti.</string>
+    <string name="popup_footer">Developed by Elia Onofri\nIAC - CNR\nv.1.0.5b</string>
+    <string name="popup_fine">I dati sono salvati nella cartella:</string>
+    <!-- <string name="popup_directory">Android/data/com.cnr.visitortracker/files/</string> -->
+    <string name="popup_directory">Android/com.cnr.visitortracker/</string>
+
+    <!-- Main Page -->
+    <string name="counter_click_tag">Conteggio Click:</string>
+    <string name="counter_people_tag">Bilancio persone:</string>
+    <string name="cancel_tag">Annulla ultima azione</string>
+    <string name="add_tag">+1</string>
+    <string name="info_tag">I</string>
+    <string name="sub_tag">-1</string>
+
+    <string-array name="rooms">
+        <item>00_Ingresso</item>
+        <item>01_Paolina</item>
+        <item>02_Enea</item>
+        <item>03_Apollo</item>
+        <item>04_Ratto</item>
+        <item>05_Portico</item>
+        <item>06_Paolina</item>
+        <item>07_Satiro</item>
+        <item>08_Caravaggio</item>
+        <item>09_Pinacoteca</item>
+        <item>10_Uscita</item>
+    </string-array>
+</resources>
