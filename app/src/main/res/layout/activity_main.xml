@@ -59,12 +59,12 @@
         android:layout_width="0dp"
         android:layout_height="98dp"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="192dp"
         android:layout_marginBottom="32dp"
         android:backgroundTint="@color/purple_200"
         android:text="@string/cancel_tag"
         android:textColor="#5E35B1"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,7 +116,7 @@
         android:layout_height="54dp"
         android:hint="@string/select"
         android:textColorHint="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/infoButton"
+        app:layout_constraintEnd_toStartOf="@+id/configButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -132,17 +132,18 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageButton
-        android:id="@+id/infoButton"
+        android:id="@+id/configButton"
         android:layout_width="54dp"
         android:layout_height="54dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/info_tag"
         android:fontFamily="monospace"
-        android:src="@android:drawable/ic_dialog_info"
+        android:src="@drawable/baseline_settings_white_36"
         android:text="@string/info_tag"
         android:textAllCaps="false"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:tint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

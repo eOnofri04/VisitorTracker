@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Pop" android:theme="@style/AppTheme.CustomTheme"/>
+        <activity android:name=".SettingsPopup" android:theme="@style/AppTheme.CustomTheme"/>
     </application>
 
 </manifest>

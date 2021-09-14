@@ -1,12 +1,17 @@
 <resources>
-    <string name="app_name">Visitor Tracker v.1.0.5b</string>
+    <string name="app_name">Visitor Tracker</string>
 
-    <string name="select">Seleziona una stanza</string>
-
+    <!-- FaceMessages -->
+    <string name="RW_permissions">NON HO I PERMESSI PER LEGGERE/SCRIVERE!!</string>
+    <string name="no_del">Nessuna operazione da annullare</string>
+    <string name="unable_create_file">Non sono stato in grado di creare il file</string>
+    <string name="unable_write_file">Non sono stato in grado di aggiornare il file</string>
+    <string name="unable_select_file">Non sono stato in grado di selezionare il file</string>
+    <string name="version">version - </string>
 
     <!-- Popup -->
     <string name="popup_intro">Al fine di contare i visitatori, selezionare la propria stanza dal menu` a tendina e utilizzare i bottoni `+1` e `-1` per aggiornare il numero di occupanti.\nIl bottone in basso permette di cancellare gli ultimi comandi impartiti.</string>
-    <string name="popup_footer">Developed by Elia Onofri\nIAC - CNR\nv.1.0.5b</string>
+    <string name="popup_footer">Developed by Elia Onofri\nIAC - CNR</string>
     <string name="popup_fine">I dati sono salvati nella cartella:</string>
     <!-- <string name="popup_directory">Android/data/com.cnr.visitortracker/files/</string> -->
     <string name="popup_directory">Android/com.cnr.visitortracker/</string>
@@ -18,18 +23,25 @@
     <string name="add_tag">+1</string>
     <string name="info_tag">I</string>
     <string name="sub_tag">-1</string>
+    <string name="select">Seleziona una stanza</string>
+    <string name="default_version_number">version-0.0.0</string>
 
     <string-array name="rooms">
         <item>00_Ingresso</item>
         <item>01_Paolina</item>
-        <item>02_Enea</item>
+        <item>02_David</item>
         <item>03_Apollo</item>
         <item>04_Ratto</item>
         <item>05_Portico</item>
-        <item>06_Paolina</item>
+        <item>06_Enea</item>
         <item>07_Satiro</item>
         <item>08_Caravaggio</item>
         <item>09_Pinacoteca</item>
         <item>10_Uscita</item>
+        <item>90_Extra</item>
+        <item>91_Extra</item>
+        <item>92_Extra</item>
+        <item>93_Extra</item>
+        <item>94_Extra</item>
     </string-array>
 </resources>
