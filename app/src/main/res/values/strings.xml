@@ -42,6 +42,7 @@
     <string name="fuchsia">FUCSIA</string>
     <string name="green">VERDE</string>
     <string name="purple">VIOLA</string>
+    <string name="grey">\?\?\?\?</string>
 
 
     <string-array name="rooms">

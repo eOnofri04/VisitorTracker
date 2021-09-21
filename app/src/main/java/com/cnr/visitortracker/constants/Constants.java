@@ -18,5 +18,5 @@ public class Constants {
 
 
 
-	public static final int NO_COLORS = 5;
+	public static final int NO_COLORS = 6;
 }

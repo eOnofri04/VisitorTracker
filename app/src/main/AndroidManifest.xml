@@ -15,7 +15,8 @@
         android:screenOrientation="portrait">
         <activity
             android:name=".activity.MainMenuActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,11 +24,18 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.RoomCounterActivity" />
+        <activity
+            android:name=".activity.RoomCounterActivity"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".activity.ExitCounterActivity" />
+        <activity
+            android:name=".activity.ExitCounterActivity"
+            android:screenOrientation="portrait"/>
 
-        <activity android:name=".activity.SettingsPopup" android:theme="@style/AppTheme.CustomTheme"/>
+        <activity
+            android:name=".activity.SettingsPopup"
+            android:theme="@style/AppTheme.CustomTheme"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

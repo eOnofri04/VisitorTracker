@@ -51,6 +51,7 @@ public class ExitCounterActivity  extends AppCompatActivity {
 		incrementButtons.add((Button) findViewById(R.id.increment_purple));
 		incrementButtons.add((Button) findViewById(R.id.increment_yellow));
 		incrementButtons.add((Button) findViewById(R.id.increment_blue));
+		incrementButtons.add((Button) findViewById(R.id.increment_grey));
 
 		cancel = (Button) findViewById(R.id.cancel_aexit);
 
@@ -59,6 +60,7 @@ public class ExitCounterActivity  extends AppCompatActivity {
 		displayCounters.add((TextView) findViewById(R.id.counter_purple));
 		displayCounters.add((TextView) findViewById(R.id.counter_yellow));
 		displayCounters.add((TextView) findViewById(R.id.counter_blue));
+		displayCounters.add((TextView) findViewById(R.id.counter_grey));
 
 		displayClick = (TextView) findViewById(R.id.counter_click_aexit);
 
