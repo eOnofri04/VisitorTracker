@@ -1,4 +1,4 @@
-package com.cnr.visitortracker;
+package com.cnr.visitortracker.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,13 +15,15 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.cnr.visitortracker.BuildConfig;
+import com.cnr.visitortracker.R;
 import com.cnr.visitortracker.constants.Constants;
 import com.cnr.visitortracker.service.VisitorTrackerService;
 
 import java.io.File;
 import java.sql.Timestamp;
 
-public class MainActivity extends AppCompatActivity {
+public class RoomCounterActivity extends AppCompatActivity {
 
 	private Button addOne;
 	private Button subOne;
@@ -45,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_room_counter);
 
 		this.setTitle(getString(R.string.app_name) + " " + BuildConfig.VERSION_NAME);
 
@@ -73,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
 		// Stop from writing if you do not have permissions
 		if (!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)){
-			Toast.makeText(MainActivity.this, getString(R.string.RW_permissions), Toast.LENGTH_SHORT).show();
+			Toast.makeText(RoomCounterActivity.this, getString(R.string.RW_permissions), Toast.LENGTH_SHORT).show();
 		}
 
 		// SetUp `+1` button
@@ -83,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 				if (service.incrementCounter( +1 )) {
 					syncCounters();
 				} else {
-					Toast.makeText(MainActivity.this, getString(R.string.unable_write_file), Toast.LENGTH_SHORT).show();
+					Toast.makeText(RoomCounterActivity.this, getString(R.string.unable_write_file), Toast.LENGTH_SHORT).show();
 				}
 				view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
 			}
@@ -96,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
 				if (service.incrementCounter( -1 )) {
 					syncCounters();
 				} else {
-					Toast.makeText(MainActivity.this, getString(R.string.unable_write_file), Toast.LENGTH_SHORT).show();
+					Toast.makeText(RoomCounterActivity.this, getString(R.string.unable_write_file), Toast.LENGTH_SHORT).show();
 				}
 				view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
 			}
@@ -110,10 +112,10 @@ public class MainActivity extends AppCompatActivity {
 					if ( service.rollback() ) {
 						syncCounters();
 					} else {
-						Toast.makeText(MainActivity.this, getString(R.string.unable_write_file), Toast.LENGTH_SHORT).show();
+						Toast.makeText(RoomCounterActivity.this, getString(R.string.unable_write_file), Toast.LENGTH_SHORT).show();
 					}
 				} else {
-					Toast.makeText(MainActivity.this, getString(R.string.no_del), Toast.LENGTH_SHORT).show();
+					Toast.makeText(RoomCounterActivity.this, getString(R.string.no_del), Toast.LENGTH_SHORT).show();
 				}
 				view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
 			}
@@ -124,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
 		config.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				startActivity(new Intent(MainActivity.this, SettingsPopup.class));
+				startActivity(new Intent(RoomCounterActivity.this, SettingsPopup.class));
 				view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
 			}
 		});
@@ -143,9 +145,9 @@ public class MainActivity extends AppCompatActivity {
 				if ( service.syncToFile( new File(getExternalFilesDir(filepath), filename) ) ){
 					setEnabled(true);
 					syncCounters();
-					Toast.makeText(MainActivity.this, "Selected: `" + filename + "`", Toast.LENGTH_SHORT).show();
+					Toast.makeText(RoomCounterActivity.this, "Selected: `" + filename + "`", Toast.LENGTH_SHORT).show();
 				} else {
-					Toast.makeText(MainActivity.this, getString(R.string.unable_select_file), Toast.LENGTH_SHORT).show();
+					Toast.makeText(RoomCounterActivity.this, getString(R.string.unable_select_file), Toast.LENGTH_SHORT).show();
 				}
 			}
 

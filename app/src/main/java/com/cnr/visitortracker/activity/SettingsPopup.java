@@ -1,9 +1,12 @@
-package com.cnr.visitortracker;
+package com.cnr.visitortracker.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.widget.TextView;
+
+import com.cnr.visitortracker.BuildConfig;
+import com.cnr.visitortracker.R;
 
 import org.w3c.dom.Text;
 
