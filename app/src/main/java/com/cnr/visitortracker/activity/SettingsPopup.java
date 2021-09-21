@@ -8,7 +8,6 @@ import android.widget.TextView;
 import com.cnr.visitortracker.BuildConfig;
 import com.cnr.visitortracker.R;
 
-import org.w3c.dom.Text;
 
 public class SettingsPopup extends Activity {
 

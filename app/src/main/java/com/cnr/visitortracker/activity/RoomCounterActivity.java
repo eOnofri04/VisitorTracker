@@ -34,12 +34,6 @@ public class RoomCounterActivity extends AppCompatActivity {
 
 	private VisitorTrackerService service;
 
-//	private static final String SAVE_DIR = "../../com.cnr.visitortracker/";
-	private static final String SAVE_DIR = "";
-
-	//private static final String[] rooms = {"00_Ingresso","01_Paolina","02_Enea","03_Apollo","04_Ratto","05_Portico","06_Paolina","07_Satiro","08_Caravaggio","09_Pinacoteca","10_Uscita","90_extra","91_extra","92_extra","93_extra","94_extra"};
-
-
 	String filename = "";
 	String filepath = "";
 
@@ -60,7 +54,7 @@ public class RoomCounterActivity extends AppCompatActivity {
 
 		service = new VisitorTrackerService();
 
-		filepath = "" + SAVE_DIR + Constants.sdfDIR.format(new Timestamp(System.currentTimeMillis()));
+		filepath = getIntent().getStringExtra(Constants.FILEPATH_KEY);
 
 		//Components reading
 		addOne = (Button)findViewById(R.id.addOne);

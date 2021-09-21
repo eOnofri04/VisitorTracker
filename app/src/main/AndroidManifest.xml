@@ -14,7 +14,7 @@
         android:theme="@style/Theme.VisitorTracker"
         android:screenOrientation="portrait">
         <activity
-            android:name=".activity.RoomCounterActivity"
+            android:name=".activity.MainMenuActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".activity.RoomCounterActivity" />
 
         <activity android:name=".activity.SettingsPopup" android:theme="@style/AppTheme.CustomTheme"/>
     </application>

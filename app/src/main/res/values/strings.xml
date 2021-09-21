@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">Visitor Tracker</string>
 
+    <!-- Main Menù -->
+    <string name="room_counter">Room Counter</string>
+    <string name="select_activity">Seleziona una attività:</string>
+    <string name="exit_counter">Exit Counter</string>
+    <string name="tema_scuro">Tema Scuro</string>
+    <string name="left_handed_mode">Modalità mancino</string>
+    <string name="default_directory">Salva in Downloads</string>
+    <string name="english_acronym">EN</string>
+
     <!-- FaceMessages -->
     <string name="RW_permissions">NON HO I PERMESSI PER LEGGERE/SCRIVERE!!</string>
     <string name="no_del">Nessuna operazione da annullare</string>
@@ -8,6 +17,7 @@
     <string name="unable_write_file">Non sono stato in grado di aggiornare il file</string>
     <string name="unable_select_file">Non sono stato in grado di selezionare il file</string>
     <string name="version">version-</string>
+    <string name="set_save_dir">Salvataggio in </string>
 
     <!-- Popup -->
     <string name="popup_intro">Al fine di contare i visitatori, selezionare la propria stanza dal menu` a tendina e utilizzare i bottoni `+1` e `-1` per aggiornare il numero di occupanti.\nIl bottone in basso permette di cancellare gli ultimi comandi impartiti.</string>
@@ -16,7 +26,7 @@
     <string name="popup_directory">Android/data/com.cnr.visitortracker/files/</string>
     <!-- <string name="popup_directory">Android/com.cnr.visitortracker/</string> -->
 
-    <!-- Main Page -->
+    <!-- Room counter Page -->
     <string name="counter_click_tag">Conteggio Click:</string>
     <string name="counter_people_tag">Bilancio persone:</string>
     <string name="cancel_tag">Annulla ultima azione</string>
@@ -25,6 +35,7 @@
     <string name="sub_tag">-1</string>
     <string name="select">Seleziona una stanza</string>
     <string name="default_version_number">version-0.0.0</string>
+
 
     <string-array name="rooms">
         <item>00_Ingresso</item>
