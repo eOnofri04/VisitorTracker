@@ -18,10 +18,9 @@ import android.widget.Toast;
 import com.cnr.visitortracker.BuildConfig;
 import com.cnr.visitortracker.R;
 import com.cnr.visitortracker.constants.Constants;
-import com.cnr.visitortracker.service.VisitorTrackerService;
+import com.cnr.visitortracker.service.RoomTrackerService;
 
 import java.io.File;
-import java.sql.Timestamp;
 
 public class RoomCounterActivity extends AppCompatActivity {
 
@@ -32,10 +31,10 @@ public class RoomCounterActivity extends AppCompatActivity {
 	private TextView display_people;
 	private TextView display_click;
 
-	private VisitorTrackerService service;
+	private RoomTrackerService service;
 
-	String filename = "";
-	String filepath = "";
+	private String filename = "";
+	private String filepath = "";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -52,17 +51,17 @@ public class RoomCounterActivity extends AppCompatActivity {
 		AutoCompleteTextView roomSelector;
 		ArrayAdapter<String> roomAdapter;
 
-		service = new VisitorTrackerService();
+		service = new RoomTrackerService();
 
 		filepath = getIntent().getStringExtra(Constants.FILEPATH_KEY);
 
 		//Components reading
 		addOne = (Button)findViewById(R.id.addOne);
 		subOne = (Button)findViewById(R.id.subOne);
-		cancel = (Button)findViewById(R.id.cancel);
+		cancel = (Button)findViewById(R.id.cancel_aroom);
 		config = (ImageButton)findViewById(R.id.configButton);
 		display_people = (TextView)findViewById(R.id.counter_persone);
-		display_click = (TextView)findViewById(R.id.counter_click);
+		display_click = (TextView)findViewById(R.id.counter_click_aroom);
 		roomSelector = (AutoCompleteTextView) findViewById(R.id.room_selector);
 
 		this.setEnabled(false);

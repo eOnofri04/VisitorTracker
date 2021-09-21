@@ -2,9 +2,9 @@
     <string name="app_name">Visitor Tracker</string>
 
     <!-- Main Menù -->
-    <string name="room_counter">Room Counter</string>
     <string name="select_activity">Seleziona una attività:</string>
-    <string name="exit_counter">Exit Counter</string>
+    <string name="room_counter">Room Tracker</string>
+    <string name="exit_counter">Exit Tracker</string>
     <string name="tema_scuro">Tema Scuro</string>
     <string name="left_handed_mode">Modalità mancino</string>
     <string name="default_directory">Salva in Downloads</string>
@@ -35,6 +35,13 @@
     <string name="sub_tag">-1</string>
     <string name="select">Seleziona una stanza</string>
     <string name="default_version_number">version-0.0.0</string>
+
+    <!-- Exit counter Page -->
+    <string name="blue">BLU</string>
+    <string name="yellow">GIALLO</string>
+    <string name="fuchsia">FUCSIA</string>
+    <string name="green">VERDE</string>
+    <string name="purple">VIOLA</string>
 
 
     <string-array name="rooms">

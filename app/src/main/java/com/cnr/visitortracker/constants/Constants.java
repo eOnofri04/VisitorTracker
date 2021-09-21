@@ -15,4 +15,8 @@ public class Constants {
 	public static final String DEFAULT_SAVE_DIR_READABLE = "Android/data/com.cnr.visitortracker/files/";
 
 	public static final String FILEPATH_KEY = "filepath";
+
+
+
+	public static final int NO_COLORS = 5;
 }

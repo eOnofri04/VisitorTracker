@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity.ExitCounterActivity">
+
+    <TextView
+        android:id="@+id/click_counter_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/counter_click_tag"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cancel_aexit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/increment_blue" />
+
+    <TextView
+        android:id="@+id/counter_click_aexit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/click_counter_tag"
+        app:layout_constraintStart_toEndOf="@+id/click_counter_tag"
+        app:layout_constraintTop_toTopOf="@+id/click_counter_tag" />
+
+    <Button
+        android:id="@+id/increment_fuchsia"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/exit_fuchsia"
+        android:text="@string/fuchsia"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/counter_fuchsia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/increment_fuchsia"
+        app:layout_constraintStart_toEndOf="@+id/increment_fuchsia"
+        app:layout_constraintTop_toTopOf="@+id/increment_fuchsia" />
+
+    <Button
+        android:id="@+id/increment_green"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/exit_green"
+        android:text="@string/green"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/increment_fuchsia" />
+
+    <TextView
+        android:id="@+id/counter_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/increment_green"
+        app:layout_constraintStart_toEndOf="@+id/increment_green"
+        app:layout_constraintTop_toTopOf="@+id/increment_green"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/increment_purple"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/exit_purple"
+        android:text="@string/purple"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/increment_green" />
+
+    <TextView
+        android:id="@+id/counter_purple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/increment_purple"
+        app:layout_constraintStart_toEndOf="@+id/increment_purple"
+        app:layout_constraintTop_toTopOf="@+id/increment_purple"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/increment_yellow"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/exit_yellow"
+        android:text="@string/yellow"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/increment_purple" />
+
+    <TextView
+        android:id="@+id/counter_yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/increment_yellow"
+        app:layout_constraintStart_toEndOf="@+id/increment_yellow"
+        app:layout_constraintTop_toTopOf="@+id/increment_yellow"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/increment_blue"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/exit_blue"
+        android:text="@string/blue"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/increment_yellow" />
+
+    <Button
+        android:id="@+id/cancel_aexit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/error2"
+        android:text="@string/cancel_tag"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/counter_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/increment_blue"
+        app:layout_constraintStart_toEndOf="@+id/increment_blue"
+        app:layout_constraintTop_toTopOf="@+id/increment_blue"
+        app:layout_constraintVertical_bias="0.5" />
+</androidx.constraintlayout.widget.ConstraintLayout>

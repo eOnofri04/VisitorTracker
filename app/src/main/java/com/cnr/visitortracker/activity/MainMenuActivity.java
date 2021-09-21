@@ -2,7 +2,6 @@ package com.cnr.visitortracker.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +13,6 @@ import androidx.appcompat.widget.SwitchCompat;
 import com.cnr.visitortracker.BuildConfig;
 import com.cnr.visitortracker.R;
 import com.cnr.visitortracker.constants.Constants;
-import com.cnr.visitortracker.service.VisitorTrackerService;
 
 import java.sql.Timestamp;
 
@@ -59,6 +57,17 @@ public class MainMenuActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View view) {
 				Intent theIntent = new Intent(MainMenuActivity.this, RoomCounterActivity.class);
+				theIntent.putExtra(Constants.FILEPATH_KEY, filepath);
+				startActivity(theIntent);
+				view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
+			}
+		});
+
+		// Launch exit counter
+		exitCounter.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Intent theIntent = new Intent(MainMenuActivity.this, ExitCounterActivity.class);
 				theIntent.putExtra(Constants.FILEPATH_KEY, filepath);
 				startActivity(theIntent);
 				view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);

@@ -1,7 +1,7 @@
 package com.cnr.visitortracker.service;
 
 import com.cnr.visitortracker.constants.Constants;
-import com.cnr.visitortracker.entity.Counters;
+import com.cnr.visitortracker.entity.Counter;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -10,18 +10,23 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 
-public class VisitorTrackerService {
+public class ExitTrackerService {
 
 
 	private File externalFile;
-	private Counters ctrs;
+	private ArrayList<Counter> ctrs;
 	private int nl;
+	private int clickCounter;
 
 
-	public VisitorTrackerService(){
+	public ExitTrackerService( int n ){
 		this.externalFile = null;
-		this.ctrs = new Counters();
+		this.clickCounter = 0;
+		this.ctrs = new ArrayList<Counter>();
+		for(int i = 0; i < n; i++){ ctrs.add(new Counter()); }
 		this.nl = 0;
 	}
 
@@ -38,10 +43,10 @@ public class VisitorTrackerService {
 		return false;
 	}
 
-	public boolean incrementCounter(int val){
-		if (saveState(val)){
-			this.ctrs.incrementCounter(val);
-			this.ctrs.click();
+	public boolean incrementCounter(int i){
+		if (saveState(i)){
+			this.ctrs.get(i).incrementCounter(+1);
+			this.click();
 			return true;
 		}
 		return false;
@@ -52,7 +57,7 @@ public class VisitorTrackerService {
 	}
 
 	public boolean rollback(){
-		int operand = 0;
+		int index = 0;
 
 		RandomAccessFile f = null;
 
@@ -74,7 +79,7 @@ public class VisitorTrackerService {
 			} else { length = 0; }
 
 			f.seek(length);
-			operand = Integer.parseInt(f.readLine().split(" ")[0]);
+			index = Integer.parseInt(f.readLine().split(" ")[0]);
 
 			f.setLength(length);
 			this.nl--;
@@ -86,8 +91,8 @@ public class VisitorTrackerService {
 			return false;
 		}
 
-		this.ctrs.incrementCounter(-operand);
-		this.ctrs.click();
+		this.ctrs.get(index).incrementCounter(-1);
+		this.click();
 
 		return true;
 	}
@@ -130,7 +135,7 @@ public class VisitorTrackerService {
 		BufferedReader br = null;
 		String line = null;
 
-		this.ctrs.resetEntity();
+		this.resetCounters();
 		this.nl = 0;
 
 		try {
@@ -138,7 +143,7 @@ public class VisitorTrackerService {
 
 			line = br.readLine();
 			while (line != null && line.length()>0) {
-				this.ctrs.incrementCounter(Integer.parseInt(line.split(Constants.DATA_SEPARATOR)[0]));
+				this.ctrs.get(Integer.parseInt(line.split(Constants.DATA_SEPARATOR)[0])).incrementCounter(+1);
 				line = br.readLine();
 				this.nl++;
 			}
@@ -150,17 +155,25 @@ public class VisitorTrackerService {
 		return true;
 	}
 
+	private void resetCounters(){
+		for(int i = 0; i < this.ctrs.size(); i++){ this.ctrs.get(i).resetEntity(); }
+	}
+
 	private void resetService(){
 		this.externalFile = null;
-		this.ctrs.resetEntity();
+		this.resetCounters();
 		this.nl = 0;
 	}
 
-	public int getPeopleCounter() {
-		return this.ctrs.getPeopleCounter();
+	public int getCounter(int i) {
+		return this.ctrs.get(i).getPeopleCounter();
 	}
 
 	public int getClickCounter() {
-		return this.ctrs.getClickCounter();
+		return this.clickCounter;
+	}
+
+	private void click(){
+		this.clickCounter++;
 	}
 }

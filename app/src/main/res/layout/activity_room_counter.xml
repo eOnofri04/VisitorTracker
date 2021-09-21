@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/addOne" />
 
     <Button
-        android:id="@+id/cancel"
+        android:id="@+id/cancel_aroom"
         android:layout_width="0dp"
         android:layout_height="98dp"
         android:layout_marginStart="32dp"
@@ -96,7 +96,7 @@
         app:layout_constraintTop_toBottomOf="@+id/subOne" />
 
     <TextView
-        android:id="@+id/counter_click"
+        android:id="@+id/counter_click_aroom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

@@ -25,6 +25,8 @@
 
         <activity android:name=".activity.RoomCounterActivity" />
 
+        <activity android:name=".activity.ExitCounterActivity" />
+
         <activity android:name=".activity.SettingsPopup" android:theme="@style/AppTheme.CustomTheme"/>
     </application>
 
